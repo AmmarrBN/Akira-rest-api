@@ -1,36 +1,33 @@
 # ```Alphabot-Api```
 <p align="center">
-<a href="https://github.com/zeeoneofc/followers"><img title="Followers" src="https://img.shields.io/github/followers/zeeoneofc?color=red&style=flat-square"></a>
-<a href="https://github.com/zeeoneofc/api-zeeoneofc/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/zeeoneofc/api-zeeoneofc?color=blue&style=flat-square"></a>
-<a href="https://github.com/zeeoneofc/api-zeeoneofc/network/members"><img title="Forks" src="https://img.shields.io/github/forks/zeeoneofc/api-zeeoneofc?color=red&style=flat-square"></a>
-<a href="https://github.com/zeeoneofc/api-zeeoneofc/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/zeeoneofc/api-zeeoneofc?label=Watchers&color=blue&style=flat-square"></a>
-<a href="https://github.com/zeeoneofc/Rest-api-alphabot"><img title="Open Source" src="https://badges.frapsoft.com/os/v2/open-source.svg?v=103"></a>
-<a href="https://github.com/zeeoneofc/Rest-api-alphabot/"><img title="Size" src="https://img.shields.io/github/repo-size/zeeoneofc/Rest-api-alphabot?style=flat-square&color=green"></a>
-<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fzeeoneofc%2FRest-api-alphabot&count_bg=%2379C83D&title_bg=%23555555&icon=probot.svg&icon_color=%2300FF6D&title=hits&edge_flat=false"/></a>
-<a href="https://github.com/zeeoneofc/Rest-api-alphabot/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;
+<a href="https://github.com/AkiRaID/followers"><img title="Followers" src="https://img.shields.io/github/followers/AkiRaID?color=red&style=flat-square"></a>
+<a href="https://github.com/AkiRaID/Akira-rest-api/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/AkiRaID/Akira-rest-api?color=blue&style=flat-square"></a>
+<a href="https://github.com/AkiRaID/Akira-rest-api/network/members"><img title="Forks" src="https://img.shields.io/github/forks/AkiRaID/Akira-rest-api?color=red&style=flat-square"></a>
+<a href="https://github.com/AkiRaID/Akira-rest-api/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/AkiRaID/Akira-rest-api?label=Watchers&color=blue&style=flat-square"></a>
+<a href="https://github.com/AkiRaID/Akira-rest-api"><img title="Open Source" src="https://badges.frapsoft.com/os/v2/open-source.svg?v=103"></a>
+<a href="https://github.com/AkiRaID/Akira-rest-api/"><img title="Size" src="https://img.shields.io/github/repo-size/AkiRaID/Akira-rest-api?style=flat-square&color=green"></a>
+<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FAkiRaID%2FAkira-rest-api&count_bg=%2379C83D&title_bg=%23555555&icon=probot.svg&icon_color=%2300FF6D&title=hits&edge_flat=false"/></a>
+<a href="https://github.com/AkiRaID/Akira-rest-api/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;
 </p>
 <p align='center'>
     </p>
 
 -------
-<h1 align="center">assalamu'alaikum <img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="40px" alt="hi"><br>I'm zeeone 😇 </h1>
+<h1 align="center">Assalamu'alaikum <img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="40px" alt="Hi"><br>I'M Akira🀄 </h1>
 <p align="center">
   <img src="https://c.top4top.io/p_2069qnvob1.jpg" /></>
 </p>
 
-- 👼 My name is Zeeone 
-- 🗣️ I am 17 years old 
+- ⚔️ My Name is Akira
+- 💠 My Real Name is Muhammad Reihan Saputra
 - 🔭 I am not programmer
 
 ## ```Connect with me```
 <p align="center">
-  <a href="https://instagram.com/zeeoneofc"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/> 
-  <a href="https://wa.me/message/JBGU4J2DVYEDK1"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-  <a href="https://www.facebook.com/profile.php?id=100015526687857"><img src="https://img.shields.io/badge/Facebook-%234267B2.svg?&style=for-the-badge&logo=facebook&logoColor=white" />
-  <a href="https://t.me/zeeoneee"><img src="https://img.shields.io/badge/Telegram-%230088cc.svg?&style=for-the-badge&logo=telegram&logoColor=white" /> <br>
-  <a href="https://github.com/zeeoneofc"><img src="https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github" /> 
-  <a href="https://youtube.com/channel/UCdzWwbApjkyODby7_MoRYlA"><img src="https://img.shields.io/youtube/channel/subscribers/UCdzWwbApjkyODby7_MoRYlA?style=social" /> <br>
-  <a href="https://komarev.com/ghpvc/?username=zeeoneofc&color=blue&style=flat-square&label=Profile+Dilihat"><img src="https://komarev.com/ghpvc/?username=zeeoneofc&color=blue&style=flat-square&label=Profile+Dilihat" />
+  <a href="https://instagram.com/muhammadreihansaputra27"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/> 
+  <a href="https://wa.me/6282158549899"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+  <a href="https://github.com/AkiRaID"><img src="https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github" /> 
+  <a href="https://m.youtube.com/channel/UCvVd-kAsrJUjg0bwKqxUPeg"><img src="https://img.shields.io/youtube/channel/subscribers/UCvVd-kAsrJUjg0bwKqxUPeg?style=social" /> <br>
 
 </p>
 
@@ -150,7 +147,7 @@ case 'random_quote':
 Example Case:
 
 case 'maker_2d':
-      if (args.length < 1) return reply(`Usage: ${prefix + command} teks\nExample : ${prefix + command} zeeoneofc)
+      if (args.length < 1) return reply(`Usage: ${prefix + command} teks\nExample : ${prefix + command} AkiRaID)
       teksnya = args.join(" ")
       ini_result = await fetchJson(`https://api-alphabot.herokuapp.com/api/maker?text=${teksnya}&apikey=Alphabot`}
       get_result = ini_result.result
@@ -170,7 +167,7 @@ case 'maker_2d':
 Example Case:
 
 case 'maker_3d':
-      if (args.length < 1) return reply(`Usage: ${prefix + command} teks\nExample : ${prefix + command} zeeoneofc)
+      if (args.length < 1) return reply(`Usage: ${prefix + command} teks\nExample : ${prefix + command} AkiRaID)
       teksnya = args.join(" ")
       ini_result = await fetchJson(`https://api-alphabot.herokuapp.com/api/maker3d?text=${teksnya}&apikey=Alphabot`}
       get_result = ini_result.result
@@ -190,7 +187,7 @@ case 'maker_3d':
 Example Case:
 
 case 'sertifikat_ff':
-      if (args.length < 1) return reply(`Usage: ${prefix + command} teks\nExample : ${prefix + command} zeeoneofc)
+      if (args.length < 1) return reply(`Usage: ${prefix + command} teks\nExample : ${prefix + command} AkiRaID)
       teksnya = args.join(" ")
       ini_result = await fetchJson(`api-alphabot.herokuapp.com/api/maker/special/epep?text=${teksnya}&apikey=Alphabot`}
       get_result = ini_result.result
@@ -210,7 +207,7 @@ case 'sertifikat_ff':
 Example Case:
 
 case 'coffe_cup':
-      if (args.length < 1) return reply(`Usage: ${prefix + command} teks\nExample : ${prefix + command} zeeoneofc)
+      if (args.length < 1) return reply(`Usage: ${prefix + command} teks\nExample : ${prefix + command} AkiRaID)
       teksnya = args.join(" ")
       ini_result = await fetchJson(`https://percobaannih.herokuapp.com/api/textmaker/senja?text=${teksnya}&theme=coffee-cup&apikey=Alphabot`}
       get_result = ini_result.result
@@ -423,7 +420,7 @@ case 'republika':
 Example Case:
 
 case 'base64encode':
-      if (args.length < 1) return reply(`Usage : ${prefix + command} teks\nExample : ${prefix + command} zeeoneofc)
+      if (args.length < 1) return reply(`Usage : ${prefix + command} teks\nExample : ${prefix + command} AkiRaID)
       query = args.join(" ")
       ini_result = await fetchJson(`https://api-alphabot.herokuapp.com/api/base?apikey=Alphabot&type=base64&encode=${query}`)
       get_result = ini_result.result
@@ -461,9 +458,9 @@ case 'covid_word':
 
 ## ```coffee ☕```
 
-- [`SAWERIA`](https://saweria.co/zeeoneofc)
+- [`SAWERIA`](https://saweria.co/Akira27)
 
-## ```Thnaks To```
+## ```Thanks To```
 
 - [`Zahir`]()
-- [`Hads`]()
+- [`Zeeone OFC`]()
