@@ -28,6 +28,7 @@
    <meta name="keywords" content="AKIRA API">
    <meta name="author" content="Akira">
   </head>
+  
   <body>
   <body id="page-top" onload="getvisitor();">
     <div class="container-scroller">
@@ -498,7 +499,8 @@
           <i class="menu-arrow"></i>
           </a>
           <div class="collapse" id="ui-donasi">
-          <ul class="nav flex-column sub-menu">       
+          <ul class="nav flex-column sub-menu">
+          
           <li class="nav-item"> <a class="nav-link"href="https://saweria.co/akira27">Saweria</a></li>
           </ul>
           </div>
@@ -789,7 +791,7 @@
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex align-items-center align-self-start">
-                          <h4 class="mb-0" id="Clock">Loading...</h4>
+                          <h4 class="mb-0" id="waktu">Loading...</h4>
                         </div>
                       </div>
                       <div class="col-3">
@@ -798,7 +800,7 @@
                         </div>
                       </div>
                     </div>
-                    <font face="Original Surfer" class="text-muted font-weight-normal" id="Ucapan">🌴</font>
+                    <font face="Original Surfer" class="text-muted font-weight-normal" id="sayings">🌴</font>
                   </div>
                 </div>
               </div>
@@ -827,7 +829,7 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="mt-3 btn btn-outline-danger bg-transparent">
-                    <div id="demo" class="alert btn btn-outline-danger" role="alert">
+                    <div id="device" class="alert btn btn-outline-danger" role="alert">
                       <span id="Statistic">Waiting...</span>
                     </div>
                   </div>
@@ -839,7 +841,7 @@
                   <div class="card-body">
                       <h6 class="text-center font-weight-bold">Akira Rest APIs</h6><hr color="red">
                      <div class="row content-justify-center">
-                       <img width="150px" height="150px" class="rounded-square img-thumbnail" id="image" src="https://i.ibb.co/ZJT5NdT/20211027-182221.jpg" alt=""><hr>
+                       <img width="150px" height="150px" class="rounded-circle img-thumbnail" id="image" src="https://i.ibb.co/MCmTj3n/20211027-180243.png" alt=""><hr>
                          <div class="col">
                       <font size="2" face="Original Surfer" class="col mt-3 text-center text-uppercase font-weight-bold">&nbsp; &nbsp;Thanks To:<br>• Zahirr<br>• Farhan<br>• Adi Official<br>• Zeeone OFC<br>• [ TLG ]<br>• Muhammad Saw<br>• Allah Swt</font>
                          </div>
@@ -907,357 +909,460 @@
     <script src="../js/demo/chart-area-demo.js"></script>  
     
     <script>
-    	// User Agent
-txt = "";
-txt += "<p><b>Version Browser</b>: <br>" + navigator.appVersion + "</p>";
-txt += "<p><b>Language</b>: " + navigator.language + "</p>";
-txt += "<p><b>Browser</b>: " + navigator.appCodeName + "</p>";
-txt += "<p><b>Vendor</b>: " + navigator.vendor + "</p>";
-txt += "<p><b>Browser Online</b>: " + navigator.onLine + "</p>";
-txt += "<p><b>Cookies</b>: " + navigator.cookieEnabled + "</p>";
-txt += "<p><b>Platform</b>: " + navigator.platform + "</p>";
-txt += "<p><b>User Agent</b>: <br>" + navigator.userAgent + "</p>";
+var close = document.getElementsByClassName("closebtn");
+var i;
 
-myMonths = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
-myDays = ['Minggu','Senin','Selasa','Rabu','Kamis','Jum at','Sabtu'];
-var tgl = new Date();
-var day = tgl.getDate()
-bulan = tgl.getMonth()
-var thisDay = tgl.getDay(),
-ThisDay = myDays[thisDay];
-var yy = tgl.getYear()
-var year = (yy < 1000) ? yy + 1900 : yy;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function(){
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
+</script>
 
-const tanggal = `${ThisDay}, ${day} - ${myMonths[bulan]} - ${year}`
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
+			var gradient = ctx.createLinearGradient(0, 0, 0, 225);
+			gradient.addColorStop(0, "rgba(215, 227, 244, 1)");
+			gradient.addColorStop(1, "rgba(215, 227, 244, 0)");
+			// Line chart
+			new Chart(document.getElementById("chartjs-dashboard-line"), {
+				type: "line",
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+						label: "Sales ($)",
+						fill: true,
+						backgroundColor: gradient,
+						borderColor: window.theme.primary,
+						data: [
+							2115,
+							1562,
+							1584,
+							1892,
+							1587,
+							1923,
+							2566,
+							2448,
+							2805,
+							3438,
+							2917,
+							3327
+						]
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					tooltips: {
+						intersect: false
+					},
+					hover: {
+						intersect: true
+					},
+					plugins: {
+						filler: {
+							propagate: false
+						}
+					},
+					scales: {
+						xAxes: [{
+							reverse: true,
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}],
+						yAxes: [{
+							ticks: {
+								stepSize: 1000
+							},
+							display: true,
+							borderDash: [3, 3],
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Pie chart
+			new Chart(document.getElementById("chartjs-dashboard-pie"), {
+				type: "pie",
+				data: {
+					labels: ["Chrome", "Firefox", "IE"],
+					datasets: [{
+						data: [4306, 3801, 1689],
+						backgroundColor: [
+							window.theme.primary,
+							window.theme.warning,
+							window.theme.danger
+						],
+						borderWidth: 5
+					}]
+				},
+				options: {
+					responsive: !window.MSInputMethodContext,
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					cutoutPercentage: 75
+				}
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Bar chart
+			new Chart(document.getElementById("chartjs-dashboard-bar"), {
+				type: "bar",
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+						label: "This year",
+						backgroundColor: window.theme.primary,
+						borderColor: window.theme.primary,
+						hoverBackgroundColor: window.theme.primary,
+						hoverBorderColor: window.theme.primary,
+						data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+						barPercentage: .75,
+						categoryPercentage: .5
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					scales: {
+						yAxes: [{
+							gridLines: {
+								display: false
+							},
+							stacked: false,
+							ticks: {
+								stepSize: 20
+							}
+						}],
+						xAxes: [{
+							stacked: false,
+							gridLines: {
+								color: "transparent"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var markers = [{
+					coords: [31.230391, 121.473701],
+					name: "Shanghai"
+				},
+				{
+					coords: [28.704060, 77.102493],
+					name: "Delhi"
+				},
+				{
+					coords: [6.524379, 3.379206],
+					name: "Lagos"
+				},
+				{
+					coords: [35.689487, 139.691711],
+					name: "Tokyo"
+				},
+				{
+					coords: [23.129110, 113.264381],
+					name: "Guangzhou"
+				},
+				{
+					coords: [40.7127837, -74.0059413],
+					name: "New York"
+				},
+				{
+					coords: [34.052235, -118.243683],
+					name: "Los Angeles"
+				},
+				{
+					coords: [41.878113, -87.629799],
+					name: "Chicago"
+				},
+				{
+					coords: [51.507351, -0.127758],
+					name: "London"
+				},
+				{
+					coords: [40.416775, -3.703790],
+					name: "Madrid "
+				}
+			];
+			var map = new jsVectorMap({
+				map: "world",
+				selector: "#world_map",
+				zoomButtons: true,
+				markers: markers,
+				markerStyle: {
+					initial: {
+						r: 9,
+						strokeWidth: 7,
+						stokeOpacity: .4,
+						fill: window.theme.primary
+					},
+					hover: {
+						fill: window.theme.primary,
+						stroke: window.theme.primary
+					}
+				},
+				zoomOnScroll: false
+			});
+			window.addEventListener("resize", () => {
+				map.updateSize();
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var date = new Date(Date.now() - 5 * 24 * 60 * 60 * 1000);
+			var defaultDate = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
+			document.getElementById("datetimepicker-dashboard").flatpickr({
+				inline: true,
+				prevArrow: "<span title=\"Previous month\">&laquo;</span>",
+				nextArrow: "<span title=\"Next month\">&raquo;</span>",
+				defaultDate: defaultDate
+			});
+		});
+	</script>
+<script type="text/javascript">
 
-document.getElementById("Years").innerHTML = year;
-document.getElementById("Statistic").innerHTML = txt;
-document.getElementById("tanggal").innerHTML = tanggal;
-
-//ucapan Tiap Hari
 Sayings = "";
-			var now = new Date();
-			var hours = now.getHours();
-			if (hours >= 17 || hours <= 2){
-			Sayings += "<span class='text-light'>Selamat malam ðŸŒš</span>"
+
+			var now = new Date();			var hours = now.getHours();
+
+			if (hours >= 16 && hours <= 17){
+
+			Sayings += "<span class='text-success'>Waktunya Sholat Maghrib</span>"
+
+			} else if (hours >= 18 || hours <= 2){
+
+			Sayings += "<span class='text-success'>Selamat Malam</span>"
+
 			} else if (hours >= 3 && hours <= 10){
-			Sayings += "<span class='text-info'>Selamat pagi ðŸŒ</span>"
+
+			Sayings += "<span class='text-success'>Selamat Pagi</span>"
+
 			} else if (hours >= 11 && hours <= 14){
-			Sayings += "<span class='text-warning'>Selamat Siang ðŸŒž</span>"
-			} else if (hours >= 13 && hours <= 16){
-			Sayings += "<span class='text-success'>Selamat Sore ðŸŒœ</span>"
-			}
-document.getElementById("Ucapan").innerHTML = Sayings;
 
-// Jam Sekarang
+			Sayings += "<span class='text-success'>Selamat Siang</span>"
+
+			} else if (hours >= 13 && hours <= 15){
+
+			Sayings += "<span class='text-success'>Selamat Sore</span>"
+
+			}
+
+document.getElementById("sayings").innerHTML = Sayings 
 window.setTimeout("waktu()", 1000);
+
+ 
+
 	function waktu() {
-		var d = new Date();
-  const jam = d.getHours();
-  const menit = d.getMinutes();
-  const detik = d.getSeconds();
+
+		var waktu = new Date();
+
 		setTimeout("waktu()", 1000);
-		document.getElementById("Clock").innerHTML = jam +" : "+ menit +" : "+ detik +" WIB";
+
+		document.getElementById("jam").innerHTML = waktu.getHours();
+
+		document.getElementById("menit").innerHTML = waktu.getMinutes();
+
+		document.getElementById("detik").innerHTML = waktu.getSeconds();
+
 	}
+	
+	var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-// Count Down Idul Adha
-var countDownDate = new Date("July 19, 2021 00:00:00").getTime();
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  }).add({
+    targets: '.ml2',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
 
-var x = setInterval(function() {
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
+    </script>
+
+    <script> 
+        /* Add "https://api.ipify.org?format=json" statement 
+
+           this will communicate with the ipify servers in 
+
+           order to retrieve the IP address $.getJSON will 
+
+           load JSON-encoded data from the server using a 
+
+           GET HTTP request */
+        $.getJSON("../external.html?link=https://api.ipify.org/?format=json", 
+            function(data) { 
+            // Setting text of element P with id gfg 
+            $("#gfg").html(data.ip); 
+        }) 
+    </script> 
     
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    <script type="text/javascript">
+txt = "<span>Browser CodeName: " + navigator.appCodeName + + navigator.appName + "</span><br>";
+txt+= "<span>Browser Name: " + navigator.appName + "</span><br>";
+txt+= "<span>Browser Version: " + navigator.appVersion + "</span><br>";
+txt+= "<span>Cookies Enabled: " + navigator.cookieEnabled + "</span><br>";
+txt+= "<span>Platform: " + navigator.platform + "</span><br>";
+txt+= "<span>User-agent header: " + navigator.userAgent + "</span><br>";
+document.getElementById("Browserinfo").innerHTML=txt;
+</script>
+
+<script type="text/javascript">
+    (function () {
+    'use strict';
     
-  document.getElementById("IdulAdha").innerHTML = days + " Days " + hours + " Hours "
-  + minutes + " Min " + seconds + " Sec ";
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("IdulAdha").innerHTML = "Selamat Hari Raya Idul Adha ";
-  }
-}, 1000);
-
-var batteryLevel = document.getElementById("batteryLevel");
-			var styleBatteryLevel = batteryLevel.style;
-			var percentageLevel = document.getElementById("percentageLevel");
-			navigator.getBattery().then(function(battery) {
-			function updateAllBatteryInfo(){
-			updateLevelInfo();
-			}
-			updateAllBatteryInfo();
-			battery.addEventListener('levelchange',      function(){
-			setInterval(function(){
-			updateLevelInfo()
-			},1000);
-			});
-			function updateLevelInfo(){
-			var numBattery = battery.level * 100;
-			percentageLevel.textContent=Math.round(numBattery) + "%";
-			styleBatteryLevel.height=numBattery + "%";
-			if(numBattery<=15) {
-			styleBatteryLevel.background="red";
-			}
-			};
-			});
-
-	const Image = ["./../images/logo1.png","./../images/logo2.png","./../images/logo3.jpeg"]
-	const randImage = Image[Math.floor(Math.random() * Image.length)];
-
-(function($) {
-  'use strict';
-  $('#image')[0].src = randImage;
-
-  $.fn.andSelf = function() {
-    return this.addBack.apply(this, arguments);
-  }
-  $(function() {
-    if ($("#currentBalanceCircle").length) {
-      var bar = new ProgressBar.Circle(currentBalanceCircle, {
-        color: '#000',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
-        strokeWidth: 12,
-        trailWidth: 12,
-        trailColor: '#0d0d0d',
-        easing: 'easeInOut',
-        duration: 1400,
-        text: {
-          autoStyleContainer: false
+    var module = {
+        options: [],
+        header: [navigator.platform, navigator.userAgent, navigator.appVersion, navigator.vendor, window.opera],
+        dataos: [
+            { name: 'Windows Phone', value: 'Windows Phone', version: 'OS' },
+            { name: 'Windows', value: 'Win', version: 'NT' },
+            { name: 'iPhone', value: 'iPhone', version: 'OS' },
+            { name: 'iPad', value: 'iPad', version: 'OS' },
+            { name: 'Kindle', value: 'Silk', version: 'Silk' },
+            { name: 'Android', value: 'Android', version: 'Android' },
+            { name: 'PlayBook', value: 'PlayBook', version: 'OS' },
+            { name: 'BlackBerry', value: 'BlackBerry', version: '/' },
+            { name: 'Macintosh', value: 'Mac', version: 'OS X' },
+            { name: 'Linux', value: 'Linux', version: 'rv' },
+            { name: 'Palm', value: 'Palm', version: 'PalmOS' }
+        ],
+        databrowser: [
+            { name: 'Chrome', value: 'Chrome', version: 'Chrome' },
+            { name: 'Firefox', value: 'Firefox', version: 'Firefox' },
+            { name: 'Safari', value: 'Safari', version: 'Version' },
+            { name: 'Internet Explorer', value: 'MSIE', version: 'MSIE' },
+            { name: 'Opera', value: 'Opera', version: 'Opera' },
+            { name: 'BlackBerry', value: 'CLDC', version: 'CLDC' },
+            { name: 'Mozilla', value: 'Mozilla', version: 'Mozilla' }
+        ],
+        init: function () {
+            var agent = this.header.join(' '),
+                os = this.matchItem(agent, this.dataos),
+                browser = this.matchItem(agent, this.databrowser);
+            
+            return { os: os, browser: browser };
         },
-        from: { color: '#d53f3a', width: 12 },
-        to: { color: '#d53f3a', width: 12 },
-        // Set default step function for all animate calls
-        step: function(state, circle) {
-          circle.path.setAttribute('stroke', state.color);
-          circle.path.setAttribute('stroke-width', state.width);
-      
-          var value = Math.round(circle.value() * 100);
-          circle.setText('');
-      
-        }
-      });
-
-      bar.text.style.fontSize = '1.5rem';
-      bar.animate(0.4);  // Number from 0.0 to 1.0
-    }
-    if($('#audience-map').length) {
-      $('#audience-map').vectorMap({
-        map: 'world_mill_en',
-        backgroundColor: 'transparent',
-        panOnDrag: true,
-        focusOn: {
-          x: 0.5,
-          y: 0.5,
-          scale: 1,
-          animate: true
-        },
-        series: {
-          regions: [{
-            scale: ['#3d3c3c', '#f2f2f2'],
-            normalizeFunction: 'polynomial',
-            values: {
-
-              "BZ": 75.00,
-              "US": 56.25,
-              "AU": 15.45,
-              "GB": 25.00,
-              "RO": 10.25,
-              "GE": 33.25
+        matchItem: function (string, data) {
+            var i = 0,
+                j = 0,
+                html = '',
+                regex,
+                regexv,
+                match,
+                matches,
+                version;
+            
+            for (i = 0; i < data.length; i += 1) {
+                regex = new RegExp(data[i].value, 'i');
+                match = regex.test(string);
+                if (match) {
+                    regexv = new RegExp(data[i].version + '[- /:;]([\\d._]+)', 'i');
+                    matches = string.match(regexv);
+                    version = '';
+                    if (matches) { if (matches[1]) { matches = matches[1]; } }
+                    if (matches) {
+                        matches = matches.split(/[._]+/);
+                        for (j = 0; j < matches.length; j += 1) {
+                            if (j === 0) {
+                                version += matches[j] + '.';
+                            } else {
+                                version += matches[j];
+                            }
+                        }
+                    } else {
+                        version = '0';
+                    }
+                    return {
+                        name: data[i].name,
+                        version: parseFloat(version)
+                    };
+                }
             }
-          }]
+            return { name: 'unknown', version: 0 };
         }
-      });
-    }
-    if ($("#transaction-history").length) {
-      var areaData = {
-        labels: ["Paypal", "Stripe","Cash"],
-        datasets: [{
-            data: [55, 25, 20],
-            backgroundColor: [
-              "#111111","#00d25b","#ffab00"
-            ]
-          }
-        ]
-      };
-      var areaOptions = {
-        responsive: true,
-        maintainAspectRatio: true,
-        segmentShowStroke: false,
-        cutoutPercentage: 70,
-        elements: {
-          arc: {
-              borderWidth: 0
-          }
-        },      
-        legend: {
-          display: false
-        },
-        tooltips: {
-          enabled: true
-        }
-      }
-      var transactionhistoryChartPlugins = {
-        beforeDraw: function(chart) {
-          var width = chart.chart.width,
-              height = chart.chart.height,
-              ctx = chart.chart.ctx;
-      
-          ctx.restore();
-          var fontSize = 1;
-          ctx.font = fontSize + "rem sans-serif";
-          ctx.textAlign = 'left';
-          ctx.textBaseline = "middle";
-          ctx.fillStyle = "#ffffff";
-      
-          var text = "$1200", 
-              textX = Math.round((width - ctx.measureText(text).width) / 2),
-              textY = height / 2.4;
-      
-          ctx.fillText(text, textX, textY);
+    };
+    
+    var e = module.init(),
+        debug = '';
+    
+    debug += 'Os Name: ' + e.os.name + '<br/>';
+    debug += 'Os Version: ' + e.os.version + '<br/>';
+    debug += 'Browser Name: ' + e.browser.name + '<br/>';
+    debug += 'Browser Version: ' + e.browser.version + '<br/>';
+    
+    debug += '<br/>';
+    debug += 'Navigator UserAgent: ' + navigator.userAgent + '<br/>';
+    debug += 'Navigator AppVersion: ' + navigator.appVersion + '<br/>';
+    debug += 'Navigator Platform: ' + navigator.platform + '<br/>';
+    debug += 'Navigator Vendor: ' + navigator.vendor + '<br/>';
+    
+    document.getElementById('device').innerHTML = debug;
+}());
+</script>
 
-          ctx.restore();
-          var fontSize = 0.75;
-          ctx.font = fontSize + "rem sans-serif";
-          ctx.textAlign = 'left';
-          ctx.textBaseline = "middle";
-          ctx.fillStyle = "#6c7293";
-
-          var texts = "Total", 
-              textsX = Math.round((width - ctx.measureText(text).width) / 1.93),
-              textsY = height / 1.7;
-      
-          ctx.fillText(texts, textsX, textsY);
-          ctx.save();
-        }
+<script>
+  function getvisitor(){
+              var xhr = new XMLHttpRequest();
+              var url = '../external.html?link=https://api.countapi.xyz/hit/osonesu.github.io./visits';
+              xhr.onloadend = function(){
+             data = JSON.parse(this.responseText);
+  document.getElementById("visitor").textContent = data.value
+              };
+              xhr.open("GET.html", url, true);
+              xhr.send();
+  }
+ 
+ </script>
+ 
+<script>
+   var countDownDate = new Date("June 5, 2022 11:27:15").getTime();
+   var timeClear = setInterval(function() {
+      var now = new Date().getTime();
+      var timeLeft = countDownDate - now;
+      var days = Math.floor(timeLeft / (  3500 * 60 * 60 * 24));
+      var hours = Math.floor(
+         (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+      document.querySelector(".timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      if (timeLeft < 0) {
+         clearInterval(timeClear);
+         document.querySelector(".timer").innerHTML = "Timer Finished";
       }
-      var transactionhistoryChartCanvas = $("#transaction-history").get(0).getContext("2d");
-      var transactionhistoryChart = new Chart(transactionhistoryChartCanvas, {
-        type: 'doughnut',
-        data: areaData,
-        options: areaOptions,
-        plugins: transactionhistoryChartPlugins
-      });
-    }
-    if ($("#transaction-history-arabic").length) {
-      var areaData = {
-        labels: ["Paypal", "Stripe","Cash"],
-        datasets: [{
-            data: [55, 25, 20],
-            backgroundColor: [
-              "#111111","#00d25b","#ffab00"
-            ]
-          }
-        ]
-      };
-      var areaOptions = {
-        responsive: true,
-        maintainAspectRatio: true,
-        segmentShowStroke: false,
-        cutoutPercentage: 70,
-        elements: {
-          arc: {
-              borderWidth: 0
-          }
-        },      
-        legend: {
-          display: false
-        },
-        tooltips: {
-          enabled: true
-        }
-      }
-      var transactionhistoryChartPlugins = {
-        beforeDraw: function(chart) {
-          var width = chart.chart.width,
-              height = chart.chart.height,
-              ctx = chart.chart.ctx;
-      
-          ctx.restore();
-          var fontSize = 1;
-          ctx.font = fontSize + "rem sans-serif";
-          ctx.textAlign = 'left';
-          ctx.textBaseline = "middle";
-          ctx.fillStyle = "#ffffff";
-      
-          var text = "$1200", 
-              textX = Math.round((width - ctx.measureText(text).width) / 2),
-              textY = height / 2.4;
-      
-          ctx.fillText(text, textX, textY);
-
-          ctx.restore();
-          var fontSize = 0.75;
-          ctx.font = fontSize + "rem sans-serif";
-          ctx.textAlign = 'left';
-          ctx.textBaseline = "middle";
-          ctx.fillStyle = "#6c7293";
-
-          var texts = "Ù…Ø¬Ù…ÙˆØ¹", 
-              textsX = Math.round((width - ctx.measureText(text).width) / 1.93),
-              textsY = height / 1.7;
-      
-          ctx.fillText(texts, textsX, textsY);
-          ctx.save();
-        }
-      }
-      var transactionhistoryChartCanvas = $("#transaction-history-arabic").get(0).getContext("2d");
-      var transactionhistoryChart = new Chart(transactionhistoryChartCanvas, {
-        type: 'doughnut',
-        data: areaData,
-        options: areaOptions,
-        plugins: transactionhistoryChartPlugins
-      });
-    }
-    if ($('#owl-carousel-basic').length) {
-      $('#owl-carousel-basic').owlCarousel({
-        loop: true,
-        margin: 10,
-        dots: false,
-        nav: true,
-        autoplay: true,
-        autoplayTimeout: 4500,
-        navText: ["<i class='mdi mdi-chevron-left'></i>", "<i class='mdi mdi-chevron-right'></i>"],
-        responsive: {
-          0: {
-            items: 1
-          },
-          600: {
-            items: 1
-          },
-          1000: {
-            items: 1
-          }
-        }
-      });
-    }
-    var isrtl = $("body").hasClass("rtl");
-    if ($('#owl-carousel-rtl').length) {
-      $('#owl-carousel-rtl').owlCarousel({
-        loop: true,
-        margin: 10,
-        dots: false,
-        nav: true,
-        rtl: isrtl,
-        autoplay: true,
-        autoplayTimeout: 4500,
-        navText: ["<i class='mdi mdi-chevron-right'></i>", "<i class='mdi mdi-chevron-left'></i>"],
-        responsive: {
-          0: {
-            items: 1
-          },
-          600: {
-            items: 1
-          },
-          1000: {
-            items: 1
-          }
-        }
-      });
-    }
-    });
+   }, 1000);
 </script>
   
 <!-- Mirrored from api-alphabot.herokuapp.com/docs by HTTrack Website Copier/3.x [XR&CO'2017], Mon, 11 Oct 2021 22:18:44 GMT -->
