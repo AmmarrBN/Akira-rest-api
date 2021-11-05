@@ -791,7 +791,7 @@
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex align-items-center align-self-start">
-                          <h4 class="mb-0" id="waktu">Loading...</h4>
+                          <h4 class="mb-0" id="waktu()">Loading...</h4>
                         </div>
                       </div>
                       <div class="col-3">
@@ -1221,7 +1221,7 @@ anime.timeline({loop: true})
            load JSON-encoded data from the server using a 
 
            GET HTTP request */
-        $.getJSON("../external.html?link=https://api.ipify.org/?format=json", 
+        $.getJSON("https//api.ipify.org/?format=json", 
             function(data) { 
             // Setting text of element P with id gfg 
             $("#gfg").html(data.ip); 
@@ -1236,6 +1236,63 @@ txt+= "<span>Cookies Enabled: " + navigator.cookieEnabled + "</span><br>";
 txt+= "<span>Platform: " + navigator.platform + "</span><br>";
 txt+= "<span>User-agent header: " + navigator.userAgent + "</span><br>";
 document.getElementById("Browserinfo").innerHTML=txt;
+</script>
+
+<script type="text/javascript">
+myMonths = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+myDays = ['Minggu','Senin','Selasa','Rabu','Kamis','Jum at','Sabtu'];
+var tgl = new Date();
+var day = tgl.getDate()
+bulan = tgl.getMonth()
+var thisDay = tgl.getDay(),
+ThisDay = myDays[thisDay];
+var yy = tgl.getYear()
+var year = (yy < 1000) ? yy + 1900 : yy;
+
+const tanggal = `${ThisDay}, ${day} - ${myMonths[bulan]} - ${year}`
+
+document.getElementById("Years").innerHTML = year;
+document.getElementById("Statistic").innerHTML = txt;
+document.getElementById("tanggal").innerHTML = tanggal;
+</script>
+
+<script type="text/javascript">
+window.setTimeout("getip()",1000);
+function getip(){
+  var xhr=new XMLHttpRequest();
+  var url='https://api.ipify.org?format=json';
+  xhr.onloadend=function(){
+  data=JSON.parse(this.responseText);
+  document.getElementById("ip").textContent=data.ip
+};
+xhr.open("GET",url,true);
+xhr.send();
+}
+</script>
+
+<script type="text/javascript">
+var batteryLevel = document.getElementById("batteryLevel");
+			var styleBatteryLevel = batteryLevel.style;
+			var percentageLevel = document.getElementById("percentageLevel");
+			navigator.getBattery().then(function(battery) {
+			function updateAllBatteryInfo(){
+			updateLevelInfo();
+			}
+			updateAllBatteryInfo();
+			battery.addEventListener('levelchange',      function(){
+			setInterval(function(){
+			updateLevelInfo()
+			},1000);
+			});
+			function updateLevelInfo(){
+			var numBattery = battery.level * 100;
+			percentageLevel.textContent=Math.round(numBattery) + "%";
+			styleBatteryLevel.height=numBattery + "%";
+			if(numBattery<=15) {
+			styleBatteryLevel.background="red";
+			}
+			};
+			});
 </script>
 
 <script type="text/javascript">
@@ -1335,7 +1392,7 @@ document.getElementById("Browserinfo").innerHTML=txt;
 <script>
   function getvisitor(){
               var xhr = new XMLHttpRequest();
-              var url = '../external.html?link=https://api.countapi.xyz/hit/osonesu.github.io./visits';
+              var url = https://api.countapi.xyz/hit/osonesu.github.io./visits';
               xhr.onloadend = function(){
              data = JSON.parse(this.responseText);
   document.getElementById("visitor").textContent = data.value
